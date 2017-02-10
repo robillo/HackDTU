@@ -1,6 +1,7 @@
 package com.appbusters.robinkamboj.hackdtu.view;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
@@ -13,12 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.appbusters.robinkamboj.hackdtu.R;
+import com.appbusters.robinkamboj.hackdtu.view.fragments.LeaderboardFragment;
 import com.appbusters.robinkamboj.hackdtu.view.fragments.MainFragment;
 
 public class MaineActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +54,20 @@ public class MaineActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce=false;
+                }
+            }, 2000);
         }
     }
 
@@ -81,9 +100,15 @@ public class MaineActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_walk) {
-            // Handle the camera action
+            MainFragment mainFragment = new MainFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, mainFragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_leaderboard) {
-
+            LeaderboardFragment leaderboardFragment = new LeaderboardFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, leaderboardFragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {

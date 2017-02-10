@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MaineActivity"
+            android:name=".view.MaineActivity"
             android:label="@string/title_activity_maine"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

@@ -8,20 +8,40 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.appbusters.robinkamboj.hackdtu.R;
+import com.appbusters.robinkamboj.hackdtu.controller.Recycler_View_Adapter;
+import com.appbusters.robinkamboj.hackdtu.model.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PublicActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    List<Data> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_public);
 
+        data = fillWithData();
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        Recycler_View_Adapter adapter = new Recycler_View_Adapter(data, getApplicationContext());
+        recyclerView.setAdapter(adapter);
 
+    }
+
+    private List<Data> fillWithData(){
+        List<Data> data = new ArrayList<>();
+
+        for(int i = 1; i <= 12; i++){
+            data.add(new Data("one", "two", "three", "four"));
+        }
+
+        return data;
     }
 
     @Override

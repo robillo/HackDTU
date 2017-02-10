@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.appbusters.robinkamboj.hackdtu.R;
 import com.appbusters.robinkamboj.hackdtu.controller.ItemClickListener;
+import com.appbusters.robinkamboj.hackdtu.view.PrivateMapsActivity;
 import com.appbusters.robinkamboj.hackdtu.view.PublicMapsActivity;
 
 public class View_Holder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{

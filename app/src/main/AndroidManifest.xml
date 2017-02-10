@@ -43,7 +43,11 @@
             android:name=".view.PrivateMapsActivity"
             android:label="@string/title_activity_private_maps" />
         <activity android:name=".view.FitApiActivity" />
-        <activity android:name=".view.PublicActivity"></activity>
+        <activity android:name=".view.PublicActivity" />
+        <activity
+            android:name=".view.PublicMapsActivity"
+            android:label="@string/title_activity_public_maps"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

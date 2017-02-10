@@ -1,6 +1,7 @@
 package com.appbusters.robinkamboj.hackdtu.view.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.appbusters.robinkamboj.hackdtu.R;
+import com.appbusters.robinkamboj.hackdtu.view.PrivateMapsActivity;
+import com.appbusters.robinkamboj.hackdtu.view.PublicActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
@@ -53,14 +56,16 @@ public class MainFragment extends Fragment {
         private_walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(getActivity(), PrivateMapsActivity.class);
+                getActivity().startActivity(i);
             }
         });
 
         public_walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(getActivity(), PublicActivity.class);
+                getActivity().startActivity(i);
             }
         });
 

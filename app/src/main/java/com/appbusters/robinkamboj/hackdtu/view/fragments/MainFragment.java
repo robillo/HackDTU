@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.appbusters.robinkamboj.hackdtu.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,8 +30,25 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
 
+        private_walk = (Button) v.findViewById(R.id.private_walk);
+        public_walk = (Button) v.findViewById(R.id.public_walk);
+
         imageView1 = (ImageView) v.findViewById(R.id.imageView1);
         imageView2 = (ImageView) v.findViewById(R.id.imageView2);
+
+        Glide.with(this)
+                .load("https://3.bp.blogspot.com/-TS-cRx0ckOY/WJ4h0MiepKI/AAAAAAAAAGY/6Im2ByybWEQ7PLOT9qLzvWUlsc6Wk3sjgCLcB/s1600/one.jpg")
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .crossFade()
+                .centerCrop()
+                .into(imageView1);
+
+        Glide.with(this)
+                .load("https://1.bp.blogspot.com/-osLp51eo35c/WJ4hzg9lmKI/AAAAAAAAAGU/SrD1dvItE-g0--55uao-H3HdN1nbAMJ3ACLcB/s1600/two.jpg")
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .crossFade()
+                .centerCrop()
+                .into(imageView2);
 
         private_walk.setOnClickListener(new View.OnClickListener() {
             @Override

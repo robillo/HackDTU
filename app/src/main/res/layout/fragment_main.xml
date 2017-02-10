@@ -30,7 +30,6 @@
                 android:layout_weight="1"
                 android:id="@+id/private_walk"
                 android:text="PRIVATE WALK"
-                android:layout_margin="7sp"
                 android:background="@drawable/card_background"/>
 
         </LinearLayout>
@@ -59,7 +58,6 @@
                 android:layout_weight="1"
                 android:id="@+id/public_walk"
                 android:text="WALK WITH NEARBY PEOPLE"
-                android:layout_margin="7sp"
                 android:background="@drawable/card_background"/>
 
         </LinearLayout>

@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "856235224949",
+    "firebase_url": "https://appathon-bafab.firebaseio.com",
+    "project_id": "appathon-bafab",
+    "storage_bucket": "appathon-bafab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856235224949:android:32cad96e17d0d417",
+        "android_client_info": {
+          "package_name": "com.appbusters.robinkamboj.appathonbasics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856235224949-r32haos3qr3310q3u3oj28r3ck0ltd10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEFT2hLaUK0eA062XQ36eXXXCW4i8Wf1Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856235224949:android:676c3115280ef6ad",
+        "android_client_info": {
+          "package_name": "probeginners.hackcsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856235224949-r32haos3qr3310q3u3oj28r3ck0ltd10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEFT2hLaUK0eA062XQ36eXXXCW4i8Wf1Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856235224949:android:4a44647c5491b711",
+        "android_client_info": {
+          "package_name": "com.appbusters.robinkamboj.hackdtu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856235224949-r32haos3qr3310q3u3oj28r3ck0ltd10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEFT2hLaUK0eA062XQ36eXXXCW4i8Wf1Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

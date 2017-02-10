@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.appbusters.robinkamboj.hackdtu"
         minSdkVersion 16
@@ -32,4 +32,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services:9.8.0'
     compile 'com.google.android.gms:play-services-fitness:8.4.0'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
 }

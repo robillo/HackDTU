@@ -1,8 +1,77 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.appbusters.robinkamboj.hackdtu.view.PrivateMapsActivity" />
+    android:layout_width="match_parent"
+    tools:context="com.appbusters.robinkamboj.hackdtu.view.PrivateMapsActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+
+            <TextView
+                android:text="Starting Point:"
+                android:textColor="#000"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <EditText
+                android:text="Lajpat Nagar"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/starting_point"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:layout_marginBottom="15sp">
+
+            <TextView
+                android:text="Destination Point:"
+                android:textColor="#000"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <EditText
+                android:text="Robin"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/destination_point"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEE ROUTE"
+            android:background="@drawable/card_background"/>
+
+    </LinearLayout>
+
+    <fragment
+        android:layout_weight="1"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"/>
+
+</LinearLayout>
+
+
+

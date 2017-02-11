@@ -5,5 +5,4 @@ package com.appbusters.robinkamboj.hackdtu.classmodels;
  */
 
 public class WalkModel {
-    public
 }
